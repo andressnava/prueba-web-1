@@ -1,0 +1,17 @@
+<% if(error) { %>
+
+    <div class="messageError" id="error" onclick="myError()">
+        <p><%= error%></p>
+        <script src="/js/myError.js"></script>
+    </div>
+
+<% } %>
+
+<% if(error_msg) { %>
+
+    <div class="messageError" id="error_msg" onclick="myError2()">
+        <p><%= error_msg%></p> 
+        <script src="/js/myError2.js"></script>
+    </div>
+
+<% } %>

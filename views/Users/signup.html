@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../components/head.html')%>
+
+<body>
+    <%- include('../components/nav.html')%>
+    <div class="form-users">
+        <h1>Sign Up</h1>
+        <form action="/users/new-user" method="POST">
+            <p><input type="email" placeholder="E-mail" name="mail" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required autofocus></p>
+            <p><input type="text" placeholder="User Name" name="username" required></p>
+            <p><input type="password" placeholder="Password" name="password" required></p>
+            <p><input type="submit" value="Accept"></p>
+        </form>
+    </div>
+    
+</body>
+
+</html>

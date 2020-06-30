@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../components/head.html')%>
+<body>
+    <%- include('../components/nav.html')%>
+    
+    <div class="formAlbum">
+        <h1><%= title%></h1>
+            <form action="/albums/edit/<%= EditAlbum.id %>?_method=PUT" method="POST">
+                    
+                <input type="hidden" name="_method" value="PUT">
+                <p><input type="text" placeholder="Album" name="name" value="<%= EditAlbum.name%>" autofocus></p>
+                <p><input type="text" placeholder="Artist" name="artist" value="<%= EditAlbum.artist%>"></p>
+                <p><input type="number" placeholder="Year" name="year" value="<%= EditAlbum.year%>"></p>
+                <p><input type="submit" value="Edit"></p>
+
+            </form>
+    </div>
+
+</body>
+</html>

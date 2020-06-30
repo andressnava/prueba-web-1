@@ -1,0 +1,257 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --maincolor: rgb(65, 139, 105);
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #232526;  
+	background: -webkit-linear-gradient(to right, #414345, #232526);  
+	background: linear-gradient(to right, #414345, #232526); 
+    color:  #DEFBF3;
+} 
+
+h1{
+    margin: 0.5em;
+}
+
+.main{
+    min-height: 30em;
+}
+
+#menu{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: var(--maincolor);
+}
+
+#menu .about-nav{
+    text-align: left;
+    grid-column: 1/2;
+}
+
+
+#menu .user-nav{
+    text-align: right;
+    grid-column: 2/3;
+}
+
+#menu .album-nav{
+    text-align: right;
+    grid-column: 2/3;
+}
+
+#menu a{
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    padding: 10px;
+}
+
+#menu a:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+
+.container-table{
+    padding: 1em;
+    min-height: 30em;
+}
+
+.container-table .tableAlbums{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+
+}
+
+.tableAlbums{
+    background-color: rgba(238, 238, 238, 0.945);
+    border: 1px solid rgba(166, 188, 206, 0.493);
+    border-radius: 15px;
+    margin: 1.5em;
+}
+
+.tableAlbums tr th{
+   
+    color: rgb(65, 139, 105);
+    padding: 1em;
+    font-style: oblique;
+
+}
+
+
+.tableAlbums tr td{
+    padding: 0.5em;
+    color: #232526;
+    
+}
+
+
+.delete{
+    background-color: #E76F4C;
+    color: #fff;
+    padding: 0.5em;
+    border: none;
+}
+
+.delete:hover{
+    cursor: pointer;
+}
+
+.edit{
+    text-decoration: none;
+    color: #4FBDEC;
+}
+
+.grid-logo{
+	display: grid;
+	grid-template-rows: repeat(2, 1fr);
+    padding: 1em;
+    min-height: 10em;
+}
+
+.grid-logo > div {
+	text-align: center;
+}
+
+.grid-logo > .git-logo > img{
+    height: 30rem;
+}
+
+.grid-logo > div > a{
+	font-size: 21px;
+	color: #ecf0f1;
+	text-decoration: none;
+}
+
+.grid-logo > div > a:hover{
+	text-decoration: underline;
+	
+}
+
+.grid-logo > div > p{
+    text-align: justify;
+    margin: 1em;
+}
+
+.formAlbum{
+    min-height: 40em;
+}
+
+.formAlbum h1, .form-users{
+    text-align: center;
+}
+
+.formAlbum form{
+    padding: 1em;
+    margin: 1em;
+    display: block;
+    text-align: center;
+}
+
+.formAlbum form input{
+    margin: 0.5em;
+}
+
+.formAlbum input[type="text"], .formAlbum input[type="number"]{
+    text-align: right;
+    padding: 1em;
+
+}
+
+.formAlbum > form > p > input[type="text"]:focus, .formAlbum > form > p > input[type="number"]:focus {
+    background-color: #DEFBF3;
+}
+
+.formAlbum input[type="submit"],  .form-users input[type="submit"]{
+    padding: 1em;
+    background-color: #008CBA;
+    color: #ecf0f1;
+    border: none;
+    width: 203px;
+    
+}
+
+.formAlbum input[type="submit"]:hover, .form-users input[type="submit"]:hover{
+    cursor: pointer;
+    
+}
+
+.message, .messageError{
+    color: #000;
+}
+
+.message p{
+    background-color: rgba(156, 235, 137, 0.856);
+    text-align: center;
+}
+
+.messageError p{
+    background-color: rgba(253, 162, 135, 0.856);
+    text-align: center;
+}
+
+.message:hover, .messageError:hover{
+    cursor: pointer;
+}
+
+.grid-footer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: var(--maincolor);
+    padding: 1rem;
+}
+
+.grid-footer .part-1{
+    grid-column: 1/3;
+    text-align: justify;
+    padding: 1em;
+}
+
+.grid-footer .part-2{
+    text-align: justify;
+    padding: 1em;
+    font-style: italic;
+    color: rgb(247, 244, 109)
+}
+
+.form-users{
+    padding: 1em;
+    min-height: 20em;
+    
+}
+
+.form-users > form > p{
+    margin: 1em;   
+}
+
+.form-users input[type="text"], .form-users input[type="password"], .form-users input[type="email"]{
+    text-align: right;
+    padding: 1em;
+} 
+
+.form-users input[type="text"]:focus, .form-users input[type="password"]:focus, .form-users input[type="email"]:focus{
+    background-color: #DEFBF3;
+} 
+
+@media (max-width: 550px){
+    body{
+        font-size: 11px;
+    }
+    .grid-logo > .git-logo > img{
+        height: 25rem;
+    }
+    
+}
+
+@media (min-width: 900px){
+    body{
+        font-size: 17px;
+    }
+}

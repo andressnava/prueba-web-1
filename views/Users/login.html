@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../components/head.html')%>
+
+<body>
+    <%- include('../components/nav.html')%>
+    <div class="form-users">
+        <h1>Log in</h1>
+        <form action='/users/login-entry' method="POST">
+            <p><input type="text" placeholder="User Name" name="username" required autofocus></p>
+            <p><input type="password" placeholder="Password" name="password" required></p>
+            <p><input type="submit" value="Accept"></p>  
+        </form>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../components/head.html')%>
+
+<body>
+
+    <%- include('../components/nav.html')%>
+
+    <div class="container-table">
+        <table class="tableAlbums">
+            <tr>
+                <th>Album</th>
+                <th>Artist</th>
+                <th>Year</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+
+            <% for(var album of Albums) {%>
+            <tr>
+                <td> <%= album.name%> </td>
+                <td> <%= album.artist%> </td>
+                <td> <%= album.year%> </td>
+                <td><a href="albums/edit/<%= album.id%>" class="edit"><i class="material-icons">edit</i></a></td>
+                <td>
+                    <form action="albums/delete/<%= album.id%>?_method=DELETE" method="POST">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <input type="submit" value="Delete" class="delete">
+                    </form>
+                </td>
+            </tr>
+            <% } %>
+        </table>
+    </div>
+
+</body>
+
+</html>

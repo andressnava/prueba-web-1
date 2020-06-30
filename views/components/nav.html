@@ -1,0 +1,25 @@
+<nav id="menu">
+
+    <div class="about-nav">
+        <a href="/"><strong>Home</strong></a>
+        <a href="/about">About</a>
+    </div>
+
+    <% if(user) { %>
+        <div class="album-nav">
+            <a href="/albums">Albums</a>
+            <a href="/albums/add">New Album</a>
+            <a href="/users/logout">Log out</a>
+        </div>
+    <% } else { %>
+        <div class="user-nav">
+            <a href="/users/login">Log in</a>
+            <a href="/users/signup">Sign up</a>
+        </div>
+    <% } %>
+
+
+</nav>
+
+<%- include('./messages.html')%>
+<%- include('./errors.html')%>
